@@ -1,0 +1,99 @@
+/* Estilo general para la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(https://displays.riotgames.com/static/content-original-runeterra-ionia-3af5494dd645cb673dc4cedc2d3458b1.jpg);
+}
+
+/* Contenedor principal de la galería */
+.gallery-container {
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Título y descripción de la galería */
+h1 {
+    font-size: 40px;
+    color: #9b4a9a;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #deabdd;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los items (galería) */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los elementos "item" */
+.item {
+    flex: 1 1 calc(20% - 10px); /* Ancho del 20% menos el gap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 30px;
+    color: #333;
+    transition: transform 0.2s, background-color 0.3s;
+   
+}
+.item2{
+    flex: 1 1 calc(20% - 10px); /* Ancho del 20% menos el gap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 30px;
+    color: #333;
+}
+
+/* Efecto de hover en los elementos alternados */
+.item:nth-child(odd):hover {
+    
+    transform: scale(1.05);
+}
+
+/* Texto que aparece en el hover */
+.texto-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+/* Mostrar el texto al pasar el cursor */
+.item:hover .texto-hover {
+    opacity: 1;
+}
